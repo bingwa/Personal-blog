@@ -1,0 +1,239 @@
+:root {
+  --background: #ffffff;
+  --text: #333333;
+  --background-light: #f8f9fa;
+  --card-background: #ffffff;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --skill-card-background: #ffffff;
+  --skill-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --skill-icon-color: #1e3a8a;
+  --link-color: #1e3a8a;
+  --link-hover-color: #7c3aed;
+  --form-border: #666666;
+  --form-background: #ffffff;
+}
+
+[data-theme='dark'] {
+  --background: #1a1a1a;
+  --text: #ffffff;
+  --background-light: #2d2d2d;
+  --card-background: #2a2a2a;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --skill-card-background: #2a2a2a;
+  --skill-card-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --skill-icon-color: #7c3aed;
+  --link-color: #7c3aed;
+  --link-hover-color: #f472b6;
+  --form-border: #888888;
+  --form-background: #3a3a3a;
+}
+
+html {
+  background: var(--background);
+  color: var(--text);
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+  color: white;
+}
+
+.navbar-custom {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.navbar-custom.scrolled {
+  background: rgba(30, 58, 138, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #f472b6 !important;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #db2777, #f472b6);
+  border: none;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #be185d, #db2777);
+}
+
+.btn-outline-light {
+  border-color: white;
+  color: white;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: #1e3a8a;
+}
+
+.card {
+  background: var(--card-background);
+  border: none;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  color: var(--text);
+}
+
+.card-title,
+.card-text {
+  color: var(--text);
+}
+
+.card a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--link-hover-color);
+}
+
+.skill-card {
+  background: var(--skill-card-background);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--skill-card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #1e3a8a, #7c3aed);
+  color: white;
+}
+
+.skill-card i {
+  color: var(--skill-icon-color);
+}
+
+.skill-card:hover i {
+  color: white;
+}
+
+.skill-card h5 {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.skill-card:hover h5 {
+  color: white;
+}
+
+.form-control-xs {
+  font-size: 0.8rem;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: var(--form-background);
+  color: var(--text);
+  border: 1px solid var(--form-border);
+}
+
+.form-control-xs::placeholder {
+  color: #aaaaaa;
+}
+
+textarea.form-control-xs {
+  min-height: 60px;
+  font-size: 0.8rem;
+  padding: 5px 8px;
+}
+
+.btn-xs {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.contact-info a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: var(--link-hover-color);
+}
+
+.contact-info i {
+  color: var(--link-color);
+  font-size: 1rem;
+}
+
+section.bg-light {
+  background: var(--background-light) !important;
+}
+
+[data-theme='dark'] section.bg-light {
+  background: var(--background-light) !important;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+h5 {
+  color: var(--text);
+}
+
+p, li, a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.theme-toggle:hover {
+  color: #f472b6;
+}
